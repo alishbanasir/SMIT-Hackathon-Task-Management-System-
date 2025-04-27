@@ -102,7 +102,7 @@ export default function Signup() {
           <p className="text-[rgba(28,94,85,255)] text-[19px] mb-3">
             Already have an account? &nbsp;{" "}
             <a
-              href="/Login"
+              href="/login"
               className="text-[rgba(28,94,85,255)] hover:underline"
             >
               <b>Login</b>
