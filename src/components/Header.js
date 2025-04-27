@@ -1,9 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 const Header = () => {
+  const navigate = useNavigate();
+
   const handleLogout = () => {
     localStorage.clear();
     alert("Logged out!");
-    window.location.href = "/login";
+    navigate("/login"); 
   };
 
   return (

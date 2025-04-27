@@ -12,7 +12,7 @@ export default function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted", { username, email, dob, password });
-    navigate("/login");
+    navigate("/login");  // Redirects to login page after signup
   };
 
   return (
@@ -83,20 +83,18 @@ export default function Signup() {
               className="w-full bg-transparent text-black px-4 py-2 border-2 border-[rgba(28,94,85,255)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgba(28,94,85,255)]"
             />
           </div>
-          <a href="/Login">
-            {" "}
-            <button
-              type="submit"
-              disabled={!isFormValid}
-              className={`w-full ${
-                isFormValid
-                  ? "bg-[rgba(28,94,85,255)] text-[rgba(234,250,237,1)]"
-                  : "bg-gray-300 border-2 border-[rgba(28,94,85,255)] cursor-not-allowed"
-              } mt-10 text-[rgba(234,250,237,1)] text-[20px] py-2 font-bold tracking-wide rounded-lg transition`}
-            >
-              Create Account
-            </button>
-          </a>
+
+          <button
+            type="submit"
+            disabled={!isFormValid}
+            className={`w-full ${
+              isFormValid
+                ? "bg-[rgba(28,94,85,255)] text-[rgba(234,250,237,1)]"
+                : "bg-gray-300 border-2 border-[rgba(28,94,85,255)] cursor-not-allowed"
+            } mt-10 text-[rgba(234,250,237,1)] text-[20px] py-2 font-bold tracking-wide rounded-lg transition`}
+          >
+            Create Account
+          </button>
         </form>
         <div className="flex justify-center mt-6 text-sm">
           <p className="text-[rgba(28,94,85,255)] text-[19px] mb-3">
